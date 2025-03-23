@@ -1,0 +1,45 @@
+#zwischenstand {
+  text-align: right;
+  font-size: 2rem;
+}
+
+#eingabe {
+  text-align: right;
+  font-size: 2rem;
+}
+
+.pad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.item {
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+.item:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+#list {
+  width: 25rem;
+  text-align: right;
+  border-left: 1px solid #bbb;
+  height: 100vh;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.taschenrechner {
+  flex: 1;
+}
