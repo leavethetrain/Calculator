@@ -5,12 +5,19 @@ let list = "";
 console.log(list);
 
 function number(zahl) {
+  if (operator === "=") {
+    previousInput = 0;
+    currentnumber = 0;
+    operator = "+";
+    updatePreviousInput("");
+    updateCurrentInput(currentnumber);
+  }
   currentnumber = currentnumber * 10 + zahl;
   console.log(currentnumber);
   updateCurrentInput(currentnumber);
 }
 
-function clear() {
+function clearAll() {
   console.log("test");
   currentnumber = 0;
   previousInput = 0;
@@ -51,6 +58,16 @@ function result() {
   updateCurrentInput(previousInput);
 }
 
+function root() {
+  performOperator();
+  operator = "√";
+  updatePreviousInput(previousInput + operator);
+}
+
+function darkmode() {
+  document.body.classList.toggle("dark-mode");
+}
+
 function updateCurrentInput(text) {
   document.getElementById("eingabe").innerHTML = text;
 }
@@ -72,6 +89,8 @@ function performOperator() {
   } else if (operator === "*") {
     currentResult = previousInput * currentnumber;
   } else if (operator === "/") {
+    currentResult = previousInput / currentnumber;
+  } else if (operator === "√") {
     currentResult = previousInput / currentnumber;
   }
 

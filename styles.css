@@ -1,11 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 #zwischenstand {
   text-align: right;
   font-size: 2rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 2rem;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: var(--primarycolor);
+
+  --primarycolor: #398522;
+}
+
+body.dark-mode .item {
+  background-color: #2c2929;
+  color: var(--primarycolor);
+  border: 1px solid var(--primarycolor);
+}
+
+body.dark-mode #list {
+  border-left: 1px solid var(--primarycolor);
+  background-color: #2c2929;
 }
 
 #eingabe {
   text-align: right;
   font-size: 2rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .pad {
@@ -15,16 +42,27 @@
 }
 
 .item {
+  background-color: #fadbdb;
   padding: 1rem;
   font-size: 2rem;
   border-radius: 5px;
   border: 1px solid #bbb;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.op {
+  background-color: #f38d8d;
 }
 
 .item:hover {
   transition: all 0.2s ease-in-out;
-  background-color: #bbb;
+  background-color: #f8eded;
   cursor: pointer;
+}
+.op:hover {
+  background-color: #f79e9e;
 }
 
 #list {
@@ -34,10 +72,15 @@
   height: 100vh;
   margin-left: 1rem;
   font-size: 2rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fadbdb;
 }
 
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .taschenrechner {

@@ -8,27 +8,29 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper dark-mode">
       <div class="taschenrechner">
         <div id="zwischenstand">0</div>
         <div id="eingabe">0</div>
         <div class="pad">
-          <button onclick="number(7)" class="item">7</button
+          <button onclick="divide()" class="item op">/</button
+          ><button onclick="multiply()" class="item op">*</button
+          ><button onclick="add()" class="item op">+</button
+          ><button onclick="substract()" class="item op">-</button
+          ><button onclick="number(7)" class="item">7</button
           ><button onclick="number(8)" class="item">8</button
           ><button onclick="number(9)" class="item">9</button
-          ><button onclick="divide()" class="item">/</button
-          ><button onclick="number(4)" class="item">4</button
+          ><button onclick="root()" class="item op">√</button>
+          <button onclick="number(4)" class="item">4</button
           ><button onclick="number(5)" class="item">5</button
           ><button onclick="number(6)" class="item">6</button
-          ><button onclick="multiply()" class="item">*</button>
-          <button onclick="number(1)" class="item">1</button
+          ><button onclick="clearAll()" class="item op">CE</button
+          ><button onclick="number(1)" class="item">1</button
           ><button onclick="number(2)" class="item">2</button
           ><button onclick="number(3)" class="item">3</button
-          ><button onclick="substract()" class="item">-</button
-          ><button onclick="clear()" class="item">CE</button
+          ><button onclick="result()" class="item op">=</button
           ><button onclick="number(0)" class="item">0</button
-          ><button onclick="result()" class="item">=</button
-          ><button onclick="add()" class="item">+</button>
+          ><button onclick="darkmode()" class="item op">Darkmode</button>
         </div>
       </div>
       <div id="list"></div>
