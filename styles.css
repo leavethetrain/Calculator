@@ -1,12 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+body.dark-mode #eingabe {
+  background-color: #2c2929;
+}
+
+body.dark-mode #zwischenstand {
+  background-color: #2c2929;
+}
+
 #zwischenstand {
   text-align: right;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-style: normal;
   height: 2rem;
+  background-color: #fce6e6;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
 }
 
 body.dark-mode {
@@ -28,11 +39,14 @@ body.dark-mode #list {
 }
 
 #eingabe {
+  margin-bottom: 1.5rem;
   text-align: right;
   font-size: 2rem;
   font-family: "Barlow", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
+  background-color: #fadbdb;
+  border-radius: 5px;
 }
 
 .pad {
@@ -46,7 +60,7 @@ body.dark-mode #list {
   padding: 1rem;
   font-size: 2rem;
   border-radius: 5px;
-  border: 1px solid #bbb;
+  border: 1px solid #f38d8d;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -60,15 +74,21 @@ body.dark-mode #list {
   transition: all 0.2s ease-in-out;
   background-color: #f8eded;
   cursor: pointer;
+  transform: scale(0.96);
+}
+
+body.dark-mode .pad .item:hover {
+  background-color: #2a4b1d;
 }
 .op:hover {
   background-color: #f79e9e;
 }
 
 #list {
-  width: 25rem;
+  width: 30rem;
   text-align: right;
-  border-left: 1px solid #bbb;
+  border-left: 1px solid #f38d8d;
+  border-radius: 5px;
   height: 100vh;
   margin-left: 1rem;
   font-size: 2rem;
@@ -79,10 +99,30 @@ body.dark-mode #list {
 }
 
 .wrapper {
+  margin-top: 1rem;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .taschenrechner {
   flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .item {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  #list {
+    width: 100%;
+
+    margin: 1rem auto;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

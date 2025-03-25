@@ -91,7 +91,7 @@ function performOperator() {
   } else if (operator === "/") {
     currentResult = previousInput / currentnumber;
   } else if (operator === "√") {
-    currentResult = previousInput / currentnumber;
+    currentResult = Math.sqrt(currentnumber);
   }
 
   if (operator !== "=") {
