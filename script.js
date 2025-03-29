@@ -69,14 +69,14 @@ function darkmode() {
 }
 
 function updateCurrentInput(text) {
-  document.getElementById("eingabe").innerHTML = text;
+  document.getElementById("input").innerHTML = text;
 }
 
 function updatePreviousInput(text) {
-  document.getElementById("zwischenstand").innerHTML = text;
+  document.getElementById("interimResult").innerHTML = text;
 }
 
-function paragraph() {
+function calculation() {
   document.getElementById("list").innerHTML = list;
 }
 
@@ -104,7 +104,7 @@ function performOperator() {
       currentResult +
       "</p>";
     list = listString + list;
-    paragraph();
+    calculation();
     previousInput = currentResult;
   }
 
